@@ -13,6 +13,7 @@
 		84D5A4542A38A6B8002F367D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5A4522A38A6B8002F367D /* Main.storyboard */; };
 		84D5A4562A38A6B9002F367D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D5A4552A38A6B9002F367D /* Assets.xcassets */; };
 		84D5A4592A38A6B9002F367D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5A4572A38A6B9002F367D /* LaunchScreen.storyboard */; };
+		84D5A4612A3A44D8002F367D /* ViewController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5A4602A3A44D8002F367D /* ViewController+Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84D5A4552A38A6B9002F367D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D5A4582A38A6B9002F367D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D5A45A2A38A6B9002F367D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D5A4602A3A44D8002F367D /* ViewController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Style.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				84D5A44C2A38A6B8002F367D /* AppDelegate.swift */,
 				84D5A44E2A38A6B8002F367D /* SceneDelegate.swift */,
 				84D5A4502A38A6B8002F367D /* ViewController.swift */,
+				84D5A4602A3A44D8002F367D /* ViewController+Style.swift */,
 				84D5A4522A38A6B8002F367D /* Main.storyboard */,
 				84D5A4552A38A6B9002F367D /* Assets.xcassets */,
 				84D5A4572A38A6B9002F367D /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D5A4612A3A44D8002F367D /* ViewController+Style.swift in Sources */,
 				84D5A4512A38A6B8002F367D /* ViewController.swift in Sources */,
 				84D5A44D2A38A6B8002F367D /* AppDelegate.swift in Sources */,
 				84D5A44F2A38A6B8002F367D /* SceneDelegate.swift in Sources */,
