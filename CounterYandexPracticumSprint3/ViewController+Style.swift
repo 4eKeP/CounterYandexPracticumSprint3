@@ -20,11 +20,13 @@ extension ViewController{
     
     func removeButtonStyle(){
         removeButton.setImage(UIImage(systemName: "clear"), for: .normal)
+        removeButton.tintColor = .white
     }
     
     func decreaseButtonStyle(){
         decreaseButton.setImage(UIImage(systemName: "minus"), for: .normal)
         decreaseButton.backgroundColor = .blue
+        decreaseButton.tintColor = .white
         decreaseButton.layer.cornerRadius = 5
         decreaseButton.layer.borderWidth = 1
         decreaseButton.layer.borderColor = UIColor.black.cgColor
@@ -33,6 +35,7 @@ extension ViewController{
     func addButtonStyle(){
         addButton.setImage(UIImage(systemName: "plus"), for: .normal)
         addButton.backgroundColor = .red
+        addButton.tintColor = .white
         addButton.layer.cornerRadius = 5
         addButton.layer.borderWidth = 1
         addButton.layer.borderColor = UIColor.black.cgColor
