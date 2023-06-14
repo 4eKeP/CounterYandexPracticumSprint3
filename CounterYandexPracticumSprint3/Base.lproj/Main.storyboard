@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwO-aL-i4v">
-                                <rect key="frame" x="41.333333333333343" y="200" width="292.33333333333326" height="36"/>
+                                <rect key="frame" x="41.333333333333343" y="446.33333333333331" width="292.33333333333326" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-om-IUd">
-                                <rect key="frame" x="118.33333333333333" y="286" width="138.33333333333337" height="65.666666666666686"/>
+                                <rect key="frame" x="118.33333333333333" y="532.33333333333337" width="138.33333333333337" height="65.666666666666629"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,17 +53,38 @@
                                     <constraint firstAttribute="height" constant="110" id="plT-ZH-qK7"/>
                                 </constraints>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменений:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-gw-CYW">
+                                <rect key="frame" x="20" y="70" width="335" height="356.33333333333331"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-nr-vDg">
+                                <rect key="frame" x="306" y="502.33333333333331" width="49" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9k-aF-IRf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dwO-aL-i4v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="DfG-Cj-OUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BhS-nr-vDg" secondAttribute="trailing" constant="20" id="0sR-by-RJt"/>
+                            <constraint firstItem="dwO-aL-i4v" firstAttribute="top" secondItem="VKe-gw-CYW" secondAttribute="bottom" constant="20" id="2JA-F6-wdI"/>
+                            <constraint firstItem="VKe-gw-CYW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6uB-t0-Y3S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L0g-kb-YN3" secondAttribute="trailing" constant="20" id="Ivf-Ko-LSW"/>
                             <constraint firstItem="aVK-om-IUd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NXJ-WC-YSd"/>
+                            <constraint firstItem="BhS-nr-vDg" firstAttribute="top" secondItem="dwO-aL-i4v" secondAttribute="bottom" constant="20" id="NYi-dQ-njh"/>
+                            <constraint firstItem="VKe-gw-CYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SPB-Hg-yHa"/>
                             <constraint firstItem="dwO-aL-i4v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XJa-ZR-NIS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L0g-kb-YN3" secondAttribute="bottom" constant="20" id="b8M-P8-oca"/>
+                            <constraint firstItem="BhS-nr-vDg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aVK-om-IUd" secondAttribute="trailing" constant="20" id="cNg-JC-cG4"/>
                             <constraint firstItem="L0g-kb-YN3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="esB-4d-f6o"/>
                             <constraint firstItem="aVK-om-IUd" firstAttribute="top" secondItem="dwO-aL-i4v" secondAttribute="bottom" constant="50" id="jGA-Ca-PeZ"/>
+                            <constraint firstItem="L0g-kb-YN3" firstAttribute="top" secondItem="aVK-om-IUd" secondAttribute="bottom" constant="50" id="oxF-EW-U8n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VKe-gw-CYW" secondAttribute="trailing" constant="20" id="tkV-Lc-sfv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -71,6 +92,8 @@
                         <outlet property="counterLable" destination="aVK-om-IUd" id="nEc-YH-OMT"/>
                         <outlet property="counterTitleLable" destination="dwO-aL-i4v" id="v9b-Hu-Rty"/>
                         <outlet property="decreaseButton" destination="s2x-Ge-TiP" id="Fj4-yk-wAQ"/>
+                        <outlet property="historyTextView" destination="VKe-gw-CYW" id="szh-oO-42y"/>
+                        <outlet property="removeButton" destination="BhS-nr-vDg" id="foY-4K-Xhc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,8 +102,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
