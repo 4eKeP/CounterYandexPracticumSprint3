@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var historyTextView: UITextView!
@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterLable: UILabel!
     @IBOutlet weak var counterTitleLable: UILabel!
     
-    var counterValue: Int = 0
+    private var counterValue: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,12 @@ class ViewController: UIViewController {
         historyTextViewStyle()
     }
 
-    @IBAction func removeButtonPressed(_ sender: Any) {
+    @IBAction private func removeButtonPressed(_ sender: Any) {
         counterValue = 0
         counterLable.text = counterValue.description
         addTextToTextView(text: "значение сброшено")
     }
-    @IBAction func decreaseButtonPressed(_ sender: Any) {
+    @IBAction private func decreaseButtonPressed(_ sender: Any) {
         if counterValue <= 0 {
             counterValue = 0
             counterLable.text = counterValue.description
@@ -45,13 +45,13 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func addButtonPressed(_ sender: Any) {
+    @IBAction private func addButtonPressed(_ sender: Any) {
         counterValue += 1
         counterLable.text = counterValue.description
         addTextToTextView(text: "значение изменено на +1")
     }
     
-    func addTextToTextView(text: String){
+    private func addTextToTextView(text: String){
         let timeStamp = DateFormatter()
         let range = NSMakeRange(historyTextView.text.count, 0)
         timeStamp.dateFormat = "dd/MM/yyyy HH:mm"
